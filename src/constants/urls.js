@@ -1,1 +1,1 @@
-export const url = 'https://labebank.vercel.app'
+export const url = 'https://fakebank-server.vercel.app'
