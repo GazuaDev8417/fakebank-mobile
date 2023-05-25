@@ -14,8 +14,8 @@ import {
 
 
 const Login = (props)=>{
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('visitante@email.com')
+  const [password, setPassword] = useState('123456')
 
 
   
@@ -33,6 +33,12 @@ const Login = (props)=>{
     }catch(e){
       alert(e)
     }
+  }
+
+
+  const limpar = ()=>{
+    setEmail('')
+    setPassword('')
   }
 
       
@@ -68,6 +74,10 @@ const Login = (props)=>{
           placeholder='Senha'/>
 
         <View style={styles.btnContainer}>
+          <TouchableOpacity style={styles.btn}
+            onPress={limpar}>
+            <Text>Limpar</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.btn}
             onPress={enter}>
             <Text>Entrar</Text>

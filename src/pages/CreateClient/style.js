@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40
+    marginTop: 20
   },
   input: {
     backgroundColor: 'lightgray',
@@ -14,12 +14,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   btnContainer: {
-    alignItems: 'center'
+    display: 'flex',    
+    flexDirection:'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 10
   },
   btn: {
-    marginTop: 40,
+    marginTop: 20,
     borderRadius: 10,
-    width: 150,
+    width: 100,
     height: 30,
     justifyContent: 'center',
     backgroundColor: 'lightgray',

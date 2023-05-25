@@ -24,16 +24,25 @@ const CreateClient = (props)=>{
 
 
   const onChangeText = (text)=>{
-    if(text.lenght === 2){
+    if(text.length === 2){
       text = text + '/'
     }
-    if(text.lenght === 5){
-      text = text = '/'
+    if(text.length === 5){
+      text = text + '/'
     }
 
     setDate(text)
   }
   
+
+  const limpar = ()=>{
+    setName('')
+    setCpf('')
+    setEmail('')
+    setDate('')
+    setPassword('')
+    setPasswordConf('')
+  }
 
 
   const signin = ()=>{
@@ -73,6 +82,7 @@ const CreateClient = (props)=>{
 
         <TextInput style={styles.input}
           onChangeText={setCpf}
+          maxLength={11}
           value={cpf}
           keyboardType='numeric'
           placeholder='CPF'/>
@@ -83,9 +93,12 @@ const CreateClient = (props)=>{
           placeholder='E-mail'/>
 
         <TextInput style={styles.input}
-          onChangeText={onChangeText}
           value={date}
-          placeholder='DD/MM/AAAA'/>
+          onChangeText={onChangeText}
+          maxLength={10}
+          keyboardType='numeric'
+          placeholder='DD/MM/AAAA'
+          placeholderTextColor='gray'/>
 
         <TextInput style={styles.input}
           onChangeText={setPassword}
@@ -101,12 +114,13 @@ const CreateClient = (props)=>{
 
         <View style={styles.btnContainer}>
           <TouchableOpacity style={styles.btn}
-            onPress={signin}>
-            <Text>
-              Registrar
-            </Text>
+            onPress={limpar}>
+            <Text>Limpar</Text>
           </TouchableOpacity>
-
+          <TouchableOpacity style={styles.btn}
+            onPress={signin}>
+            <Text>Registrar</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
