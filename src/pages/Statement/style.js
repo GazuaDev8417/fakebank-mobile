@@ -33,7 +33,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   card: {
-    margin: 15
+    margin: 10,
+    borderWidth: 1,
+    padding: 5,
+    borderRadius: 10,
+    elevation: 3,
   }
 })
 export default styles

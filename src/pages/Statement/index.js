@@ -101,9 +101,15 @@ const Statement = (props)=>{
         <View style={styles.mapContainer}>
           {state && state.map(st=>{
             return <View key={st.id} style={styles.card}>
-                    <Text style={styles.txtMap}>Data: </Text><Text>{convertDate(st.date)}</Text>
-                    <Text style={styles.txtMap}>Valor: </Text><Text>{st.value}</Text>
-                    <Text style={styles.txtMap}>Descrição: </Text><Text>{st.description}</Text>
+                    <Text style={styles.txtMap}>Data:{' '}
+                      <Text style={{fontWeight:'normal'}}>{convertDate(st.date)}</Text>
+                    </Text>
+                    <Text style={styles.txtMap}>Valor:{' '}
+                      <Text style={{fontWeight:'normal'}}>{st.value}</Text>
+                    </Text>
+                    <Text style={styles.txtMap}>Descrição:{' '}
+                      <Text style={{fontWeight:'normal'}}>{st.description}</Text>
+                    </Text>
                    </View>
           })}
        </View>
