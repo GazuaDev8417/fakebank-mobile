@@ -88,6 +88,7 @@ const Transfer = (props)=>{
         <TextInput style={styles.input}
           onChangeText={setCpf}
           value={cpf}
+          maxLength={11}
           keyboardType='numeric'
           placeholder='CPF'
           placeholderTextColor='gray'/>
@@ -101,6 +102,7 @@ const Transfer = (props)=>{
         <TextInput style={styles.input}
           onChangeText={setRecipientCpf}
           value={recipientCpf}
+          maxLength={11}
           keyboardType='numeric'
           placeholder='CPF do receptor'
           placeholderTextColor='gray'/>
